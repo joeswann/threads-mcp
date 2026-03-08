@@ -16,6 +16,7 @@ import {
 import { getRepliesDefinition, handleGetReplies } from './tools/replies.js';
 import {
   createThreadDefinition, handleCreateThread,
+  scheduleThreadDefinition, handleScheduleThread,
   replyToThreadDefinition, handleReplyToThread,
 } from './tools/publish.js';
 import {
@@ -30,6 +31,7 @@ const toolDefinitions = [
   deleteThreadDefinition,
   getRepliesDefinition,
   createThreadDefinition,
+  scheduleThreadDefinition,
   replyToThreadDefinition,
   getThreadInsightsDefinition,
   getAccountInsightsDefinition,
@@ -42,6 +44,7 @@ const toolHandlers: Record<string, (client: ThreadsClient, args: Record<string, 
   delete_thread: handleDeleteThread,
   get_replies: handleGetReplies,
   create_thread: handleCreateThread,
+  schedule_thread: handleScheduleThread,
   reply_to_thread: handleReplyToThread,
   get_thread_insights: handleGetThreadInsights,
   get_account_insights: handleGetAccountInsights,

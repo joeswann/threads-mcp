@@ -111,12 +111,17 @@ export class ThreadsClient {
   async createContainer(params: {
     text: string;
     replyToId?: string;
+    scheduledPublishTime?: number;
   }): Promise<ThreadsContainerResponse> {
     const body = new URLSearchParams();
     body.set('media_type', 'TEXT');
     body.set('text', params.text);
     if (params.replyToId) {
       body.set('reply_to_id', params.replyToId);
+    }
+    if (params.scheduledPublishTime) {
+      body.set('publish_mode', 'SCHEDULED');
+      body.set('scheduled_publish_time', String(params.scheduledPublishTime));
     }
 
     return this.makeRequest<ThreadsContainerResponse>(`/${this.userId}/threads`, {
