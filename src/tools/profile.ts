@@ -1,4 +1,3 @@
-import { z } from 'zod';
 import { McpError, ErrorCode } from '@modelcontextprotocol/sdk/types.js';
 import type { ThreadsClient } from '../api/client.js';
 

@@ -11,6 +11,10 @@ An MCP (Model Context Protocol) server for Meta Threads. Enables Claude Desktop,
 
 ## Installation
 
+### Prerequisites
+
+- Node.js >= 18.0.0
+
 ### From Source
 
 1. Clone this repository

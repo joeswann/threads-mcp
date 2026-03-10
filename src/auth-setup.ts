@@ -19,7 +19,7 @@ import { URL } from 'node:url';
 import { execSync, spawn } from 'node:child_process';
 
 const REDIRECT_PORT = 3456;
-const NGROK_PATH = '/opt/homebrew/Caskroom/ngrok/3.14.1,fK3fyLNXxVa,a/ngrok';
+const NGROK_PATH = 'ngrok';
 
 const SCOPES = [
   'threads_basic',
